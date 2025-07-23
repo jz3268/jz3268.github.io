@@ -1,0 +1,296 @@
+---
+---
+@article{osti_10515165,
+abbr = {IEEE INFOCOM},
+place = {Country unknown/Code not available},
+title = {Modeling Average False Positive Rates of Recycling Bloom Filters}, url = {https://par.nsf.gov/biblio/10515165}, abstractNote = {Bloom Filters are a space-efficient data structure used for the testing of membership in a set that errs only in the False Positive direction. However, the standard analysis that measures this False Positive rate provides a form of worst case bound that is both overly conservative for the majority of network applications that utilize Bloom Filters, and reduces accuracy by not taking into account the actual state (number of bits set) of the Bloom Filter after each arrival. In this paper, we more accurately characterize the False Positive dynamics of Bloom Filters as they are commonly used in networking applications. In particular, network applications often utilize a Bloom Filter that “recycles”: it repeatedly fills, and upon reaching a certain level of saturation, empties and fills again. In this context, it makes more sense to evaluate performance using the average False Positive rate instead of the worst case bound. We show how to efficiently compute the average False Positive rate of recycling Bloom Filter variants via renewal and Markov models. We apply our models to both the standard Bloom Filter and a “two-phase” variant, verify the accuracy of our model with simulations, and find that the previous analysis’ worst-case formulation leads to up to a 30% reduction in the efficiency of Bloom Filter when applied in network applications, while two-phase overhead diminishes as the needed False Positive rate is tightened.},
+journal = {IEEE INFOCOM 2024 - IEEE Conference on Computer Communications}, publisher = {IEEE},
+author = {Dozier, Kahlil and Salamatian, Loqman and Rubenstein, Dan},
+year = {2024},
+month = {May},
+abstract = {Bloom Filters are a space-efficient data structure used for the testing of membership in a set that errs only in the False Positive direction.  However, the standard analysis that measures this False Positive rate provides a form of worst case bound that is both overly conservative for the majority of network applications that utilize Bloom Filters, and reduces accuracy by not taking into account the actual state (number of bits set) of the Bloom Filter after each arrival.  In this paper, we more accurately characterize the False Positive dynamics of Bloom Filters as they are commonly used in networking applications.  In particular, network applications often utilize a Bloom Filter that ``recycles'': it repeatedly fills, and upon reaching a certain level of saturation, empties and fills again.  In this context, it makes more sense to evaluate performance using the average False Positive rate instead of the worst case bound.  We show how to efficiently compute the average False Positive rate of recycling Bloom Filter variants via renewal and Markov models.  We apply our models to both the standard Bloom Filter and a ``two-phase'' variant, verify the accuracy of our model with simulations, and find that the previous analysis' worst-case formulation leads to up to a 30\% reduction in the efficiency of Bloom Filter when applied in network applications, while two-phase overhead diminishes as the needed False Positive rate is tightened.},
+}
+@article{10.1145/3656005,
+  abbr = {ACM SIGMETRICS},
+author = {Dozier, Kahlil and Salamatian, Loqman and Rubenstein, Dan},
+title = {Analysis of False Negative Rates for Recycling Bloom Filters (Yes, They Happen!)},
+year = {2024},
+issue_date = {June 2024},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {8},
+number = {2},
+url = {https://doi.org/10.1145/3656005},
+doi = {10.1145/3656005},
+abstract = {Bloom Filters are a desirable data structure for distinguishing new values in sequences of data (i.e., messages), due to their space efficiency, their low false positive rates (incorrectly classifying a new value as a repeat), and never producing false negatives (classifying a repeat value as new). However, as the Bloom Filter's bits are filled, false positive rates creep upward. To keep false positive rates below a reasonable threshold, applications periodically "recycle" the Bloom Filter, clearing the memory and then resuming the tracking of data. After a recycle point, subsequent arrivals of recycled messages are likely to be misclassified as new; recycling induces false negatives. Despite numerous applications of recycling, the corresponding false negative rates have never been analyzed. In this paper, we derive approximations, upper bounds, and lower bounds of false negative rates for several variants of recycling Bloom Filters. These approximations and bounds are functions of the size of memory used to store the Bloom Filter and the distributions on new arrivals and repeat messages, and can be efficiently computed on conventional hardware. We show, via comparison to simulation, that our upper bounds and approximations are extremely tight, and can be efficiently computed for megabyte-sized Bloom Filters on conventional hardware.},
+journal = {Proc. ACM Meas. Anal. Comput. Syst.},
+month = {June},
+articleno = {21},
+numpages = {34},
+keywords = {bloom filter, false negatives, recycling bloom filter}
+}
+
+@inproceedings{10.1145/3696348.3696891,
+author = {Dozier, Kahlil and Beltran, Justin and Berg, Kylie and Matousek, Hugo and Salamatian, Loqman and Katz-Bassett, Ethan and Rubenstein, Dan},
+title = {Toward Applying Quantum Computing to Network Verification},
+year = {2024},
+isbn = {9798400712722},
+abbr = {ACM HotNets},
+month = {November},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696348.3696891},
+doi = {10.1145/3696348.3696891},
+abstract = {Network verification, broadly defined as proving the correctness of certain properties resulting from a network's configuration, cannot be efficiently solved on classical hardware via brute force. Prior work has developed a variety of methods that scale by observing a structure in the search space and then evaluating classes induced by that structure. However, even these classification mechanisms have their limitations. In this paper, we consider a radically different approach: applying quantum computing to more efficiently solve network verification problems. We provide an overview of how to map variants of verification problems into unstructured search problems that can be solved via quantum computing with quadratic speedup, making the approach feasible in theory to problems that twice as big in the size of the input. Emerging quantum systems cannot yet tackle problems of practical interest, but rapid advances in hardware and algorithm development make now a great time to start thinking about their application. With this in mind, we explore the limits of scale of the problem for which quantum computing can solve network verification problems as unstructured search.},
+booktitle = {Proceedings of the The 23rd ACM Workshop on Hot Topics in Networks},
+pages = {221–228},
+numpages = {8},
+keywords = {Network Verification, Quantum Computing},
+location = {Irvine, CA, USA},
+series = {HOTNETS '24}
+}
+
+@inproceedings{10.1145/3626111.3628213,
+  abbr = {ACM HotNets},
+author = {Vermeulen, Kevin and Salamatian, Loqman and Kim, Sang Hoon and Calder, Matt and Katz-Bassett, Ethan},
+title = {The Central Problem with Distributed Content: Common CDN Deployments Centralize Traffic In A Risky Way},
+year = {2023},
+isbn = {9798400704154},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3626111.3628213},
+doi = {10.1145/3626111.3628213},
+abstract = {Google, Netflix, Meta, and Akamai serve content to users from offnet servers in thousands of ISPs. These offnets benefit both services and ISPs, via better performance and reduced interdomain and WAN traffic. We argue that this widespread distribution of servers leads to a concentration of traffic and a previously unacknowledged risk, as many ISPs colocate offnets from multiple providers. This trend contributes to many Internet users likely accessing multiple popular services and fetching the majority of their Internet traffic from a single facility -- perhaps even a single rack -- creating shared resources and a correlated risk in cases of failures, attacks, and overload. Alternate ways to access the services often lack sufficient capacity and share resources with more services, creating the potential for cascading failures.},
+booktitle = {Proceedings of the 22nd ACM Workshop on Hot Topics in Networks},
+pages = {70–78},
+numpages = {9},
+location = {Cambridge, MA, USA},
+series = {HotNets '23}
+}
+
+@article{salamatian2018geometric,
+  abbr = {ArXiv},
+  title={A geometric approach for real-time monitoring of dynamic large scale graphs: AS-level graphs illustrated},
+  author={Salamatian, Loqman and Kaafar, Dali and Salamatian, Kav{\'e}},
+  journal={arXiv preprint arXiv:1806.00676},
+  year={2018},
+  abstract = {The monitoring of large dynamic networks is a major challenge for
+a wide range of application. The complexity stems from properties
+of the underlying graphs, in which slight local changes can lead to
+sizable variations of global properties, e.g., under certain conditions,
+a single link cut that may be overlooked during monitoring can
+result in splitting the graph into two disconnected components.
+Moreover, it is often difficult to determine whether a change will
+propagate globally or remain local. Traditional graph theory measure such as the centrality or the assortativity of the graph are not
+satisfying to characterize global properties of the graph. In this paper, we tackle the problem of real-time monitoring of dynamic large
+scale graphs by developing a geometric approach that leverages
+notions of geometric curvature and recent development in graph
+embeddings using Ollivier-Ricci curvature [47]. We illustrate the
+use of our method by considering the practical case of monitoring
+dynamic variations of global Internet using topology changes information provided by combining several BGP feeds. In particular,
+we use our method to detect major events and changes via the
+geometry of the embedding of the graph.
+We first adapt the Ricci curvature to characterize the AS level
+graph. The key idea is to detect changes in between consecutive
+snapshots and to separate events that result in considerable geometric alterations, from those that remain local. The variations of
+curvature are evaluated through a set of landmarks as reference
+points. We develop an anomaly tracking mechanism to detect large
+variations of curvature that translate into major variations in the
+geometry of the graph. These changes are then considered as major
+BGP level events. In a second stage, we describe a mechanism for
+identifying the network elements responsible for the set of coordinated changes and isolate their geometric implications. We evaluate
+this system in operational settings and show its performance in
+real-life scenarios}
+}
+
+@article{salamatian2021geopolitics,
+abbr = {Journal of Cybersecurity},
+  title={The geopolitics behind the routes data travel: a case study of Iran},
+  author={Salamatian, Loqman and Douzet, Fr{\'e}d{\'e}rick and Salamatian, Kav{\'e} and Limonier, K{\'e}vin},
+  journal={Journal of Cybersecurity},
+  volume={7},
+  number={1},
+  pages={tyab018},
+  year={2021},
+  publisher={Oxford University Press},
+  selected={true},
+  abstract = {In November 2019, in the wake of political demonstrations against the regime, Iran managed to selectively cut off most traffic from the global Internet while fully operating its own domestic network. It seemingly confirmed the main hypothesis our research had led us to, based on prior observation of data routing: Iran’s architecture of connectivity enables selective censorship of international traffic. This paper examines, through the case of Iran, how states can leverage the Border Gateway Protocol (BGP) as a tool of geopolitical control and what are the trade-offs they face. This question raises a methodological question that we also address: how the analysis of BGP can infer and document these strategies of territorialization of cyberspace. The Internet is a network of networks where each network is an autonomous system. Autonomous systems (ASes) are independent administrative entities controlled by a variety of actors such as governments, companies and universities. Their administrators have to agree and communicate on the path followed by packets travelling across the Internet, which is made possible by BGP. Agreements between ASes are often confidential but BGP requires neighbouring ASes to interact with each other in order to coordinate routing through the constant release of connectivity update messages. These messages announce the availability (or withdrawal) of a sequence of ASes that can be followed to reach an IP address prefix. In our study, we inferred the structure of Iran's connectivity through the capture and analysis of these BGP announcements. We show how the particularities of Iran's BGP and connectivity structure can enable active measures, such as censorship, both internally and externally throughout the network. We argue that Iran has found a way to reconcile a priori conflicting strategic goals: developing a self-sustaining and resilient domestic Internet, but with tight control at its borders. It thus enables the regime to leverage connectivity as a tool of censorship in the face of social instability and as a tool of regional influence in the context of strategic competition.},
+}
+
+@inproceedings{douzet2020measuring,
+  abbr = {IEEE Cycon},
+  title={Measuring the fragmentation of the Internet: the case of the Border Gateway Protocol (BGP) during the Ukrainian crisis},
+  author={Douzet, Fr{\'e}d{\'e}rick and P{\'e}tiniaud, Louis and Salamatian, Loqman and Limonier, Kevin and Salamatian, Kav{\'e} and Alchus, Thibaut},
+  booktitle={2020 12th International Conference on Cyber Conflict (CyCon)},
+  volume={1300},
+  pages={157--182},
+  year={2020},
+  organization={IEEE},
+  selected={true},
+  abstract = {This paper presents the results of a year-long research project conducted by GEODE (geode.science), a multidisciplinary team made up of geographers, computer scientists and area specialists.We developed a new methodology for mapping cyberspace in its lower layers (infrastructures and routing protocols) in order to measure and represent the level of fragmentation of the Internet in areas of geopolitical tensions using the Border Gateway Protocol (BGP). Our hypothesis was that BGP could be used for geopolitical reasons in the context of a large-scale crisis, leading to a further fragmentation of the Internet. We focused on the Ukrainian crisis.BGP is a core protocol of cyberspace that connects the tens of thousands of autonomous systems (ASes) that compose the Internet. Based on a 35-year-old technology, this protocol is easy to manipulate to re-route Internet traffic or even to cut off entire regions (BGP hijacks). Our results show actions on BGP implemented right after the 2014 Maidan Revolution, when Russian forces took control of the Crimean Peninsula and started to back separatist forces in Eastern Ukraine. In both cases, Russian authorities and separatist forces modified BGP routes in order to divert the local Internet traffic from continental Ukraine – drawing a kind of "digital frontline" consistent with the military one. The study of Donbass and of the Crimean Peninsula leads to important methodological findings to (1) define and map digital borders at the routing level; (2) analyze the strategies of actors conducting actions via BGP; (3) categorize these strategies, from traffic re-routing to cutting-off entire regions for intelligence or military purposes; and (4) anticipate future uses for BGP manipulations by identifying strategic bottlenecks within the network.}
+}
+
+@article{petiniaud2020role,
+  abbr = {Espace Pol},
+  title={Le r{\^o}le de la topologie d’Internet dans les territoires en conflit en Ukraine, une approche g{\'e}opolitique du routage des donn{\'e}es},
+  author={P{\'e}tiniaud, Louis and Salamatian, Loqman},
+  journal={L’Espace Politique. Revue en ligne de g{\'e}ographie politique et de g{\'e}opolitique},
+  number={40},
+  year={2020},
+  publisher={D{\'e}partement de g{\'e}ographie de l'universit{\'e} de Reims Champagne-Ardenne},
+  abstract = {Autonomous systems (AS) are the basic units of Internet global routing. They are group of routers interconnected by the same administrative control (Internet Service Providers, Content Providers, companies, public services etc.) that interconnect to each other to form the Internet as a whole. By establishing connection agreements between themselves via the Border Gateway Protocol (BGP), ASes allow data to flow from one point to another around the globe. In this article, we aim to understand how the aspect of the routing of data can be decisive in how we consider both the relationship between Internet and territory, and the impact of the structure of the Internet on territorial conflicts. Much literature has addressed the relationship between space and the Internet, both in geography and geopolitics. The increasing digitization of various aspects of society (Bakis, 2013 ; Cattaruzza, 2019) was first accompanied by comments about a paradigm shift of the concepts of geography (Virilio, 1997) or sovereignty (Camilleri, Falk, 1992). The relationship between space and Information and Communications Technologies (ICT) has also been considered under the angle of infrastructures and their territorial integration (Lasserre, 2000) More recently, Beaude (2012) and Loveluck (2015) have shown how the complex interactions between Internet and society, produced alternative forms of space. Increasingly, the many dimensions of the Internet and of digitization are considered a salient feature of the social construction of territories, and therefore of geopolitical conflicts (Douzet, 2014). We draw from this literature to illustrate how the network of Autonomous Systems is linked to territorial conflicts. The behavior of autonomous systems, and in particular their integration within the rest of the network, responds to geopolitical constraints. The choice of an AS’s administrators to connect to some ASes and not others, or the way they design and implement routing policies are subject to commercial, political, geographical and legal decisions. The construction of this topology then alters territories, especially disputed ones, and the power rivalries that apply to it. We show that this network is emblematic of the duality of the Internet between topography and topology. This study aims at understanding the role AS topology can play in the traditional power struggle. By selecting the paths through which data flows, administrators of AS bring out territories and new forms of « power-topology » (Allen, 2011). Our methodology combines elements of geopolitics and technical sciences (Internet measurements, network theory) and is based on quantitative approaches. We use data of interdomain connectivity gathered through BGP monitors that allow us to create graphs showing the interconnections between autonomous systems. We use an empirical approach to read the output graphs on a specific case study: disputed territories in Ukraine. The territories of Donbass and Crimea are ideal case studies in that the dispute over them is rather new, which allow us to observe with detail the changes in the topology of their networks over time. They also represent two different types of disputed territories. While Crimea was annexed by the Russian Federation in March 2014, the Donbass region is home to the two self-proclaimed People’s Republics of Donetsk and Luhansk, and is actively fighting against the central government of Ukraine with the help of Russia. By looking at the stakeholders of connectivity in these territories and their evolution, we show how the Internet is embedded into dynamics of changing sovereignty. In fact, the technical infrastructures of the Internet highlight a new vector of Russian power. The evolution of the routing topology indicates that Crimea is now fully dependent on Russia to connect to the Internet, and Donbass is following the same path.}
+}
+
+@article{limonier2021mapping,
+  abbr = {First Monday},
+  title={Mapping the routes of the Internet for geopolitics: the case of Eastern Ukraine},
+  author={Limonier, Kevin and Douzet, Fr{\'e}d{\'e}rick and P{\'e}tiniaud, Louis and Salamatian, Loqman and Salamatian, Kave},
+  journal={First Monday},
+  year={2021},
+  selected={true},
+  abstract = {In this paper, we argue that data routing is of geopolitical significance. We propose new methodologies to understand and represent the new forms of power rivalries and imbalances that occur within the lower layers of cyberspace, through the analysis of Eastern Ukraine. The Internet is a network of networks where each network is an Autonomous System (ASes). ASes are independent administrative entities controlled by a variety of actors such as governments, companies, and universities. Their administrators have to agree and communicate on paths followed by packets travelling across the Internet, which is made possible by the Border Gateway Protocol (BGP). Agreements between ASes are often confidential but BGP requires neighbouring ASes to interact with each other in order to coordinate routing through the constant release of connectivity update messages. These messages announce the availability (or withdrawal) of a sequence of ASes that can be followed to reach an IP address prefix. We select Eastern Ukraine as a case study as in 2020, six years after the beginning of the war in Donbass, data is available to analyze and map changes to data routing. In our study, we conducted a longitudinal analysis of Ukraine’s connectivity through the capture and analysis of these BGP announcements. Our results show how Donbass ASes progressively migrated from Ukraine’s cyberspace towards Russia, while still sharing connections with Ukrainian ASes. Donbass cyberspace therefore sits at the interface of Ukraine and Russia but has been relegated to the periphery of both networks; it is marginalized from the Ukrainian network but not fully integrated into the Russian network. These evolutions both reflect and affect ongoing geopolitical power rivalries in the physical world and demonstrate their strategic significance. Our methodology can be used to conduct studies in other regions subject to geopolitical open conflicts and to infer the strategies developed by states in anticipation of potential threats.}
+}
+
+@article{gerard2020rt,
+  abbr = {Espace Pol},
+  title={RT, Sputnik et le mouvement des Gilets jaunes: cartographie des communaut{\'e}s politiques sur Twitter},
+  author={G{\'e}rard, Colin and Marotte, Guilhem and Salamatian, Loqman},
+  journal={L’Espace Politique. Revue en ligne de g{\'e}ographie politique et de g{\'e}opolitique},
+  number={40},
+  year={2020},
+  publisher={D{\'e}partement de g{\'e}ographie de l'universit{\'e} de Reims Champagne-Ardenne},
+  abstract = {The Russian Federation has been developing a strategy of informational influence abroad since the beginning of 2010. This strategy, based on a massive presence on social networks, is at the heart of new power struggles between states. In France, Russian state-funded media RT and Sputnik are thus regularly blamed for their editorial policy, which many political and media actors consider as partial or misleading. The Yellow Vests movement, whose members have been accused of being manipulated by Russia and its media, illustrates this observation. While a growing number of publications has focused on the actors of Russian informational influence and the narratives they deploy (Yablokov, 2015; Audinet, 2018, 2020 ; Hutchings, 2020), the question of the reception and the propagation of content produced by these actors on different networks remain unanswered – mainly because of difficulties in accessing to social network data – despite recent efforts (Fisher, 2020). This article therefore proposes to draw up a mapping of the political communities that disseminate the contents of the international Russian media. This cartography is based on data collected on Twitter during the first months of the Yellow Vests movement. The approach we propose here is inspired by the work published by Gaumont et al. which shows that it is possible, through data from Twitter, and especially retweets, to qualify and quantify the activity of political communities, as well as their evolution and reconfiguration over time (Gaumont et al, 2018). Our methodology to map content published by the Russian media is directly in line with the work of Limonier and Pétiniaud (2018), who focused on a part of the "pro-Russian" community of the French-speaking segment of Twitter, as well as on the way this community relayed the MacronLeaks during the between-two rounds of the French presidential election of 2017. Our results first show that content produced by the Russian state-media are relatively popular across a broad spectrum of the French political landscape, from left-leaning to far-right parties. Then, we observe that Yellow Vest communities are distinguished by their weak presence and dispersal within the graph, which confirm the hypothesis that this movement was not formed and structured on Twitter but on Facebook (Sebbah et al, 2018). If the protest movement has indeed been the subject of a very high volume of publications for several months on Twitter, this platform seems to have been only a media and political soundbox, rather than a space for structuring and organizing the different groups of Yellow Vests.}
+}
+
+@article{petiniaud2019geopolitics,
+  abbr = {RIPE Labs},
+  title={Geopolitics of routing},
+  author={P{\'e}tiniaud, Louis and Salamatian, Loqman},
+  journal={RIPE Network Coordination Center: https://labs. ripe. net/Members/louis\_petiniaud/geopolitics-of-routing},
+  year={2019}
+}
+
+@inproceedings{10.1145/3517745.3561443,
+abbr = {ACM IMC},
+author = {Anderson, Scott and Salamatian, Loqman and Bischof, Zachary S. and Dainotti, Alberto and Barford, Paul},
+title = {IGDB: Connecting the Physical and Logical Layers of the Internet},
+year = {2022},
+isbn = {9781450392594},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3517745.3561443},
+doi = {10.1145/3517745.3561443},
+abstract = {Maps of physical and logical Internet connectivity that are informed by and consistent with each other can expand scope and improve accuracy in analysis of performance, robustness and security. In this paper, we describe a methodology for linking physical and logical Internet maps that aims toward a consistent, cross-layer representation. Our approach is constructive and uses geographic location as the key feature for linking physical and logical layers. We begin by building a representation of physical connectivity using online sources to identify locations that house transport hardware (i.e., PoPs, colocation centers, IXPs, etc.), and approximate locations of links between these based on shortest-path rights-of-way. We then utilize standard data sources for generating maps of IP-level and AS-level logical connectivity, and graft these onto physical maps using geographic anchors. We implement our methodology in an open-source framework called the Internet Geographic Database (iGDB), which includes tools for updating measurement data and assuring internal consistency. iGDB is built to be used with ArcGIS, a geographic information system that provides broad capability for spatial analysis and visualization. We describe the details of the iGDB implementation and demonstrate how it can be used in a variety of settings.},
+booktitle = {Proceedings of the 22nd ACM Internet Measurement Conference},
+pages = {433–448},
+numpages = {16},
+keywords = {logical internet infrastructure, physical internet infrastructure, geographic information systems},
+location = {Nice, France},
+series = {IMC '22}
+}
+
+@article{10.1145/3508025,
+abbr = {ACM SIGMETRICS},
+author = {Salamatian, Loqman and Anderson, Scott and Matthews, Joshua and Barford, Paul and Willinger, Walter and Crovella, Mark},
+title = {Curvature-Based Analysis of Network Connectivity in Private Backbone Infrastructures},
+year = {2022},
+issue_date = {March 2022},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {6},
+number = {1},
+url = {https://doi.org/10.1145/3508025},
+doi = {10.1145/3508025},
+abstract = {The main premise of this work is that since large cloud providers can and do manipulate probe packets that traverse their privately owned and operated backbones, standard traceroute-based measurement techniques are no longer a reliable means for assessing network connectivity in large cloud provider infrastructures. In response to these developments, we present a new empirical approach for elucidating private connectivity in today's Internet. Our approach relies on using only "light-weight" ( i.e., simple, easily-interpretable, and readily available) measurements, but requires applying a "heavy-weight" or advanced mathematical analysis. In particular, we describe a new method for assessing the characteristics of network path connectivity that is based on concepts from Riemannian geometry ( i.e., Ricci curvature) and also relies on an array of carefully crafted visualizations ( e.g., a novel manifold view of a network's delay space). We demonstrate our method by utilizing latency measurements from RIPE Atlas anchors and virtual machines running in data centers of three large cloud providers to (i) study different aspects of connectivity in their private backbones and (ii) show how our manifold-based view enables us to expose and visualize critical aspects of this connectivity over different geographic scales.},
+journal = {Proc. ACM Meas. Anal. Comput. Syst.},
+month = {feb},
+articleno = {5},
+numpages = {32},
+keywords = {internet measurement, manifold learning, manifold visualization, topology discovery}
+}
+
+@article{10.1145/3604620,
+abbr = {Communications of ACM},
+author = {Salamatian, Loqman and Anderson, Scott and Mathews, Joshua and Barford, Paul and Willinger, Walter and Crovella, Mark},
+title = {A Manifold View of Connectivity in the Private Backbone Networks of Hyperscalers},
+year = {2023},
+issue_date = {August 2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {66},
+number = {8},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/3604620},
+doi = {10.1145/3604620},
+abstract = {As hyperscalers such as Google, Microsoft, and Amazon play an increasingly important role in today's Internet, they are also capable of manipulating probe packets that traverse their privately owned and operated backbones. As a result, standard traceroute-based measurement techniques are no longer a reliable means for assessing network connectivity in these global-scale cloud provider infrastructures. In response to these developments, we present a new empirical approach for elucidating connectivity in these private backbone networks. Our approach relies on using only "lightweight" (i.e., simple, easily interpretable, and readily available) measurements, but requires applying "heavyweight" mathematical techniques for analyzing these measurements. In particular, we describe a new method that uses network latency measurements and relies on concepts from Riemannian geometry (i.e., Ricci curvature) to assess the characteristics of the connectivity fabric of a given network infrastructure. We complement this method with a visualization tool that generates a novel manifold view of a network's delay space. We demonstrate our approach by utilizing latency measurements from available vantage points and virtual machines running in datacenters of three large cloud providers to study different aspects of connectivity in their private backbones and show how our generated manifold views enable us to expose and visualize critical aspects of this connectivity.},
+journal = {Commun. ACM},
+month = {jul},
+pages = {95–103},
+numpages = {9}
+}
+
+@inproceedings{10.1145/3646547.3688411,
+abbr = {ACM IMC},
+author = {Salamatian, Loqman and Ardi, Calvin and Giotsas, Vasileios and Calder, Matt and Katz-Bassett, Ethan and Arnold, Todd},
+title = {What's in the Dataset? Unboxing the APNIC per AS User Population Dataset},
+year = {2024},
+issue_date = {November 2024},
+isbn = {9798400705922},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3646547.3688411},
+doi = {10.1145/3646547.3688411},
+abstract = {The research measurement community needs methods and datasets to identify user concentrations and to accurately weight ASes against each other for analyzing measurements' coverage. However, academic researchers traditionally lack visibility into how many users are in each network or how much traffic flows to each network and so often fall back on treating all IP addresses or networks equally. As an alternative, some recent studies have used the APNIC per AS Population Estimates dataset, but it is unvalidated and its methodology is not fully public. In this work, we validate its use as a fairly reliable user population indicator. Our approach includes a detailed comparative analysis using a global CDN dataset, providing concrete evidence of the APNIC dataset's accuracy. We find that the APNIC per-AS user estimates closely align with the Content Delivery Network (CDN) per-AS user estimates in 51.2\% of countries and correctly identify the largest networks in 93.9\% of cases. When we investigate the agreement with CDN traffic volume, the APNIC dataset closely aligns in 36.5\% of countries, increasing to 91.0\% when focusing only on larger networks. We also evaluate the limitations of the APNIC dataset, particularly its inability to accurately identify user populations for ASes in certain countries. To address this, we introduce new methods to improve its usability by focusing on the statistical representativeness of the underlying data collection process and ensuring consistency across several public datasets.},
+booktitle = {Proceedings of the 2024 ACM on Internet Measurement Conference},
+pages = {165–182},
+numpages = {18},
+month = {November},
+keywords = {apnic user estimates, datasets, traffic volume},
+location = {Madrid, Spain},
+series = {IMC '24}
+}
+
+
+@inproceedings{10.1145/3646547.3688429,
+abbr = {ACM IMC},
+author = {Salamatian, Loqman and Vermeulen, Kevin and Cunha, Italo and Giotsas, Vasilis and Katz-Bassett, Ethan},
+title = {metAScritic: Reframing AS-Level Topology Discovery as a Recommendation System},
+year = {2024},
+issue_date = {November 2024},
+isbn = {9798400705922},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3646547.3688429},
+doi = {10.1145/3646547.3688429},
+abstract = {Despite prior efforts, the vast majority of the AS-level topology of the Internet remains hidden from BGP and traceroute vantage points. In this work, we introduce metAScritic, a novel system inspired by recommender system literature, designed to infer interconnections within a given metro. metAScritic uses the intuition that the connectivity matrix at a given metro is a low-rank system, since ASes employ similar peering strategies according to their infrastructures, traffic profiles, and business models. This approach allows metAScritic to accurately reconstruct the complete peering connectivity by measuring a strategic subset of interconnections that capture ASes' underlying peering strategies. We evaluate metAScritic's performance across six large metropolitan areas, achieving an average F-score of 0.88 on various validation datasets, including ground truth. metAScritic measures more than 86K edges and infers more than 368K edges, compared to the 13K edges observed for this subset of ASes in public BGP feeds -- an increase of (24X) what is currently seen. We study the impact of our inferred links on Internet properties, illustrating the extent of the Internet's flattening and demonstrating our ability to better predict the impact of route leaks and prefix hijacks, compared to relying only on the existing public view.},
+booktitle = {Proceedings of the 2024 ACM on Internet Measurement Conference},
+pages = {337–364},
+numpages = {28},
+month = {November},
+keywords = {as topology, keywords{active internet measurements, matrix completion}, peering links},
+location = {Madrid, Spain},
+series = {IMC '24}
+}
+
+@article{10.1145/3594255.3594260,
+abbr = {ACM CCR},
+author = {Salamatian, Loqman and Arnold, Todd and Cunha, \'{I}talo and Zhu, Jiangchen and Zhang, Yunfan and Katz-Bassett, Ethan and Calder, Matt},
+title = {Who Squats IPv4 Addresses?},
+year = {2023},
+issue_date = {January 2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {53},
+number = {1},
+issn = {0146-4833},
+url = {https://doi.org/10.1145/3594255.3594260},
+doi = {10.1145/3594255.3594260},
+abstract = {To mitigate IPv4 exhaustion, IPv6 provides expanded address space, and NAT allows a single public IPv4 address to suffice for many devices assigned private IPv4 address space. Even though NAT has greatly extended the shelf-life of IPv4, some networks need more private IPv4 space than what is officially allocated by IANA due to their size and/or network management practices. Some of these networks resort to using squat space, a term the network operations community uses for large public IPv4 address blocks allocated to organizations but historically never announced to the Internet. While squatting of IP addresses is an open secret, it introduces ethical, legal, and technical problems. In this work we examine billions of traceroutes to identify thousands of organizations squatting. We examine how they are using it and what happened when the US Department of Defense suddenly started announcing what had traditionally been squat space. In addition to shining light on a dirty secret of operational practices, our paper shows that squatting distorts common Internet measurement methodologies, which we argue have to be re-examined to account for squat space.},
+journal = {SIGCOMM Comput. Commun. Rev.},
+month = {April},
+pages = {48–72},
+numpages = {25},
+keywords = {IPv4 squatting, internet measurements, IPv4 exhaustion, internet topology, CGNATs, IPv4 utilization}
+}
+
+

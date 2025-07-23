@@ -1,0 +1,132 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Loqman Salamatian
+    - name: Date of Birth
+      value: 22 December 1995
+    - name: Languages
+      value: English, French, Farsi, German
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD
+      institution: Columbia University, New York City, USA
+      year: 2020
+      description:
+        - Advised by Pr. Ethan Katz-Bassett, Vishal Misra and Dan Rubenstein
+        - title: Research
+          contents:
+            - Manifold Representation of the Internet
+            - Missing Peering Links
+            - IPv4 Squatting
+            - Bloom Filter
+    - title: Master Degree
+      institution: University of Paris VI, Paris, France
+      year: 2018 - 2020
+      description:
+        - Master 1 - Mathematics
+        - Master 2 - Applied Mathematics
+    - title: Undergraduate Degree
+      institution: University of Luxembourg, Belval, Luxembourg
+      year: 2015 - 2017
+      description:
+        - Bachelor in mathematics
+        - Exchange Year in Hong Kong University in 2016-2017
+
+- title: Experience
+  type: time_table
+  contents:
+    -  title: Student Researcher
+       institution: Google, New York City, USA
+       year: 2024
+       description:
+         - Research on using reverse traceroute to detect user-facing anomalies.
+    - title: Consulting
+      institution: Cassini, Paris, France
+      year: 2018 - 2022
+      description:
+        - Data scientist and write-up of reports to be shared with different customers of Cassini consulting
+    - title: Data Scientist in the Analysis Group
+      institution: Cyber Peace Institute, Geneva, Switzerland
+      year: 2020 - 2021
+      description:
+        - Researcher in the Analysis Group of the Cyber Peace Institute in Geneva
+    - title: Visiting Researcher
+      institution: University of California in San Diego (UCSD) - CAIDA
+      year: 2019
+      description:
+        - Research Internship with Alberto Dainotti
+    - title: Researcher
+      institution: Geode Research Center
+      year: 2018 -
+      description:
+        - Cyberstrategy
+        - Geopolitics of the cyberspace and visualizing tools
+    - title: Visiting Researcher
+      institution: CSIRO, Sydney, Australia
+      year: 2017 - 2018
+      description:
+        - Research on BGP anomaly detections using optimal transport
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2023
+      items:
+        - Best of CCR
+    - year: 2022
+      items:
+        - Communications of ACM - Research Highlight
+    - year: 2021
+      items:
+        - RACI Grant - RIPE, *Mapping connectivity and digital space in Central Asia*
+    - year: 2020
+      items:
+        - Columbia Dean's fellowship
+    - year: 2019
+      items:
+        - RACI Grant - RIPE, *Geopolitics of routing, what RIPE tells us of geography and power a methodlogical approach*
+        - Web Mapping Challenge SYNAPSE
+
+
+
+
+- title: Talks
+  type: time_table
+  contents:
+    - year: 2022
+      items:
+        - Google, Curvature-based Analysis of Network Connectivity in Private Backbone Infrastructures, Virtual
+    - year: 2021
+      items:
+        - 34th International Geographical Congress (IGC 2020), The journey, not the destination matters - untangling data and sovereignity in the Far West with Louis Pétiniaud & On a collaborative effort to map the Internet with Louis Pétiniaud, Virtual
+    - year: 2019
+      items:
+        - Oxford Life Connected Life Conference, The geopolitics behind the routes data travel - a case study of Iran, London and Oxford
+        - 15ème Congrès de l’Association Française de Science Politique -  Les "ruses numériques " dans les couches basses du réseau - les usages du Border Gateway Protocol dans les conflits térritoriaux, Bordeaux
+        - International Workshop - Internet, Digital Data, Power and Rivalries in the Post-Soviet Area, Discussant in the Panel - The routes of the post-soviet Internet - protocols, measurements and cartography, Paris
+    - year: 2020
+      items:
+        - Forum International de la Cybersécurité, BGP - protocole technique, outil politique - facteur politique de l’infrastructure, Lille
+        - American Political Science Association - Democracy, Difference and Destabilization (APSA), Mapping the Dissemination of Russian Narratives on Social Networks in France, Virtual
+
+- title: Academic Interests
+  type: nested_list
+  contents:
+    - title: Theoretical
+      items:
+        - Riemannian Geometry
+        - Ricci Flow
+        - Optimal Transport
+        - Network Theory
+        - Machine Learning
+        - Curvature
+        - Game Theory
+    - title: Applied
+      items:
+        - Internet Measurement
+        - GIS
+        - Network Systems
+        - Congestion Control
